@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Snake Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="console">
+    <div class="console-top">
+      <span class="brand">SNAKE™</span>
+      <span class="power-led"></span>
+    </div>
+
+    <div class="screen-bezel">
+      <div class="hud">
+        <div class="hud-block">
+          <span class="hud-label">SCORE</span>
+          <span id="score" class="hud-value">0</span>
+        </div>
+        <div class="hud-block">
+          <span class="hud-label">BEST</span>
+          <span id="highScore" class="hud-value">0</span>
+        </div>
+      </div>
+
+      <div class="screen">
+        <canvas id="game" width="400" height="600"></canvas>
+        <div id="overlay" class="overlay">
+          <p id="overlayTitle" class="overlay-title">SNAKE</p>
+          <p id="overlayMsg" class="overlay-msg">방향키 이동 · Space 시작/일시정지</p>
+          <div id="difficultySelect" class="difficulty-select">
+            <button class="diff-btn" data-ms="200">쉬움</button>
+            <button class="diff-btn active" data-ms="150">보통</button>
+            <button class="diff-btn" data-ms="100">어려움</button>
+            <button class="diff-btn" data-ms="50">매우 어려움</button>
+          </div>
+          <button id="startBtn" class="pixel-btn">START</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="console-bottom">
+      <div class="dpad">
+        <button class="dpad-btn up" data-dir="up" aria-label="up">▲</button>
+        <button class="dpad-btn left" data-dir="left" aria-label="left">◀</button>
+        <button class="dpad-btn right" data-dir="right" aria-label="right">▶</button>
+        <button class="dpad-btn down" data-dir="down" aria-label="down">▼</button>
+        <div class="dpad-center"></div>
+      </div>
+      <div class="ab-buttons">
+        <button class="round-btn b-btn" disabled>B</button>
+        <button class="round-btn a-btn" disabled>A</button>
+      </div>
+    </div>
+
+    <div class="speaker-holes">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
