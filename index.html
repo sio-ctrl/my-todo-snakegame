@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Snake Game</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -28,7 +29,7 @@
         <canvas id="game" width="400" height="600"></canvas>
         <div id="overlay" class="overlay">
           <p id="overlayTitle" class="overlay-title">SNAKE</p>
-          <p id="overlayMsg" class="overlay-msg">방향키 이동 · Space 시작/일시정지</p>
+          <p id="overlayMsg" class="overlay-msg">방향키/D-패드 이동 · Space 또는 B 버튼으로 시작·일시정지</p>
           <div id="difficultySelect" class="difficulty-select">
             <button class="diff-btn" data-ms="200">쉬움</button>
             <button class="diff-btn active" data-ms="150">보통</button>
@@ -49,7 +50,7 @@
         <div class="dpad-center"></div>
       </div>
       <div class="ab-buttons">
-        <button class="round-btn b-btn" disabled>B</button>
+        <button id="pauseBtn" class="round-btn b-btn" aria-label="pause/resume">B</button>
         <button class="round-btn a-btn" disabled>A</button>
       </div>
     </div>

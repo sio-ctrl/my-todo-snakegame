@@ -19,6 +19,15 @@ body {
   justify-content: center;
   background: radial-gradient(circle at 50% 20%, #3a3a4a, #14141c 70%);
   font-family: "Courier New", monospace;
+  overscroll-behavior: none;
+}
+
+button {
+  touch-action: manipulation; /* 더블탭 확대/300ms 탭 지연 제거 */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .console {

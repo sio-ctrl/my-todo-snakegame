@@ -142,7 +142,7 @@
     clearInterval(timer);
     clearTimeout(dietTimer);
     overlayTitle.textContent = "PAUSED";
-    overlayMsg.textContent = "스페이스바를 눌러 계속하기";
+    overlayMsg.textContent = "Space 또는 B 버튼을 눌러 계속하기";
     startBtn.style.display = "none";
     overlay.classList.remove("hidden");
   }
@@ -369,6 +369,8 @@
   });
 
   startBtn.addEventListener("click", startGame);
+
+  document.getElementById("pauseBtn").addEventListener("click", togglePause);
 
   function renderLoop() {
     if (running) checkFoodExpiry();
